@@ -1,0 +1,27 @@
+01003E21  | 6A 70                       | push 70                                                                        |
+01003E23  | 68 90130001                 | push winmine.1001390                                                           |
+01003E28  | E8 DF010000                 | call <winmine.sub_100400C>                                                     |
+01003E2D  | 33DB                        | xor ebx,ebx                                                                    |
+01003E2F  | 53                          | push ebx                                                                       |
+01003E30  | 8B3D 8C100001               | mov edi,dword ptr ds:[<&GetModuleHandleA>]                                     | edi:EntryPoint
+01003E36  | FFD7                        | call edi                                                                       | edi:EntryPoint
+01003E38  | 66:8138 4D5A                | cmp word ptr ds:[eax],5A4D                                                     |
+01003E3D  | 75 1F                       | jne winmine.1003E5E                                                            |
+01003E3F  | 8B48 3C                     | mov ecx,dword ptr ds:[eax+3C]                                                  | ecx:EntryPoint
+01003E42  | 03C8                        | add ecx,eax                                                                    | ecx:EntryPoint
+01003E44  | 8139 50450000               | cmp dword ptr ds:[ecx],4550                                                    | ecx:EntryPoint
+01003E4A  | 75 12                       | jne winmine.1003E5E                                                            |
+01003E4C  | 0FB741 18                   | movzx eax,word ptr ds:[ecx+18]                                                 | ecx+18:EntryPoint+18
+01003E50  | 3D 0B010000                 | cmp eax,10B                                                                    |
+01003E55  | 74 1F                       | je winmine.1003E76                                                             |
+01003E57  | 3D 0B020000                 | cmp eax,20B                                                                    |
+01003E5C  | 74 05                       | je winmine.1003E63                                                             |
+01003E5E  | 895D E4                     | mov dword ptr ss:[ebp-1C],ebx                                                  |
+01003E61  | EB 27                       | jmp winmine.1003E8A                                                            |
+01003E63  | 83B9 84000000 0E            | cmp dword ptr ds:[ecx+84],E                                                    | [ecx+84]:"€t囆r蕓Vn?"
+01003E6A  | 76 F2                       | jbe winmine.1003E5E                                                            |
+01003E6C  | 33C0                        | xor eax,eax                                                                    |
+01003E6E  | 3999 F8000000               | cmp dword ptr ds:[ecx+F8],ebx                                                  | [ecx+F8]:sub_100118C
+01003E74  | EB 0E                       | jmp winmine.1003E84                                                            |
+01003E76  | 8379 74 0E                  | cmp dword ptr ds:[ecx+74],E                                                    |
+01003E7A  | 76 E2                       | jbe winmine.1003E5E                                                            |

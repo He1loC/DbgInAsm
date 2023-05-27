@@ -1,0 +1,79 @@
+g
+u
+u
+u 00401002
+u
+u
+r
+r eax 1234ABCD
+r ecx 99999999
+r
+t
+t
+gret
+p
+p
+p
+dd
+dd 00403000
+e 00403000 99
+dd 00403000
+dd
+g 0040103A
+u
+bp 00401044
+bp 0040104A
+bp 0040104C
+bl
+g
+g
+g
+g
+bc 1
+bl
+g
+g
+bc 1
+u
+u
+bh e 0040105A
+bh a 00403000 4
+bh w 00403005 1
+bh w 00403009 1
+bhl
+g
+g
+g
+g
+g
+bhc 0
+bhc 1
+bhl
+g
+g
+bhc 2
+bhc 3
+ml
+u
+u
+g 0040107D
+trace 0040108B
+es rec1.scp
+
+关掉
+ls rec1.scp
+
+以下根据alloc的地址测试内存断点	16进制的长度  
+bm a 00620000 10
+bm w 00620FF0 20
+bm w 00621FF0 20
+bm w 00622FF0 3000
+bml
+bmpl
+g ....
+
+开mspaint 演示dump
+
+
+
+

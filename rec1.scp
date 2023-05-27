@@ -1,0 +1,46 @@
+g
+u
+p
+u
+bp 0040729c
+bp 004072a4
+bl
+g
+bc 0
+u
+g
+u
+t
+t
+t
+u
+bh e 00401f66
+bhl
+g
+u
+g
+u
+bhc 0
+r
+r eax 1234ABCD
+r
+r eax 00000028
+r
+bh a 00433d40 4
+g
+bhl
+bhc 0
+r
+dd 00433c70
+e 00433c70 55
+e 00433c71 55
+e 00433c72 55
+e 00433c73 55
+dd 00433c70
+bm w 00433de0 1000
+bml
+bmpl
+g
+dd 00433de0
+bmc 0
+u

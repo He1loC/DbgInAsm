@@ -1,0 +1,15 @@
+00407A55 mov ecx, dword ptr [0x432014]
+00407A5B push esi
+00407A5C push edi
+00407A5D mov edi, 0xbb40e64e
+00407A62 mov esi, 0xffff0000
+00407A67 cmp ecx, edi
+00407A69 je 0x407a6f
+00407A6B test esi, ecx
+00407A6D jne 0x407a95
+00407A95 not ecx
+00407A97 pop edi
+00407A98 mov dword ptr [0x432010], ecx
+00407A9E pop esi
+00407A9F ret 
+0040740D jmp 0x407286
